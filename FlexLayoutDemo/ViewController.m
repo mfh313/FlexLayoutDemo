@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "MFFlexLayoutCellView.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    MFFlexLayoutCellView *demoView = [[MFFlexLayoutCellView alloc] initWithFrame:CGRectMake(0, 100, CGRectGetWidth(self.view.frame), 100)];
+    demoView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:demoView];
+    
+    [demoView setName:@"测试布局" title:@"子title"];
 }
 
 
