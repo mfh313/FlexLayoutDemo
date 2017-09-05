@@ -26,12 +26,14 @@ using namespace VZ;
                              }
                                                      NodeSpecs:
                              {
-                                 
+                                 .width = 100.0,
+                                 .height = 10.0
                              }
                              ];
     
-    
-    [node layout:self.frame.size];
+    VZFNodeViewManager *viewManger = [[VZFNodeViewManager alloc] initWithView:self shouldAutoReset:YES];
+    UIView *subView = [viewManger viewForNode:textNode frame:self.frame];
+    [self addSubview:subView];
 }
 
 @end

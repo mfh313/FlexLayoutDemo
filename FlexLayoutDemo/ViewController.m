@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     MFFlexLayoutCellView *demoView = [[MFFlexLayoutCellView alloc] initWithFrame:CGRectMake(0, 100, CGRectGetWidth(self.view.frame), 100)];
-    demoView.backgroundColor = [UIColor redColor];
+    demoView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:demoView];
     
     [demoView setName:@"测试布局" title:@"子title"];
