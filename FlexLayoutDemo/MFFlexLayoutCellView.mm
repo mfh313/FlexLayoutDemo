@@ -18,11 +18,13 @@ using namespace VZ;
 {
     VZFlexNode *node = [VZFlexNode new];
     node.direction = FlexHorizontal;
+    node.alignContent = FlexCenter;
     
     VZFTextNode *textNode = [VZFTextNode newWithTextAttributes:
                              {
                                  .text = name,
-                                 ._font = [UIFont systemFontOfSize:14.0f]
+                                 ._font = [UIFont systemFontOfSize:14.0f],
+                                 .color = [UIColor redColor]
                              }
                                                      NodeSpecs:
                              {
@@ -33,7 +35,18 @@ using namespace VZ;
     
     VZFNodeViewManager *viewManger = [[VZFNodeViewManager alloc] initWithView:self shouldAutoReset:YES];
     UIView *subView = [viewManger viewForNode:textNode frame:self.frame];
+    subView.frame = self.bounds;
     [self addSubview:subView];
+}
+
+-(VZFlexNode *)flexNodeName:(NSString *)name title:(NSString *)title
+{
+    VZFlexNode *node = [VZFlexNode new];
+    node.direction = FlexHorizontal;
+    node.width = flexLength(CGRectGetWidth(self.bounds), FlexLengthTypeDefault);
+    node.height = flexLength(CGRectGetHeight(self.bounds), FlexLengthTypeDefault);
+    
+    return node;
 }
 
 @end
