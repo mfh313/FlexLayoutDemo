@@ -19,8 +19,8 @@ using namespace VZ;
     self.backgroundColor = [UIColor lightGrayColor];
     
     NodeLayout layout;
-    layout = [self stackNodeLayoutForName:name title:title];
-//    layout = [self testTextNodeForName:name];
+//    layout = [self stackNodeLayoutForName:name title:title];
+    layout = [self testTextNodeForName:name];
 //    layout = [self testImageNode];
     UIView *contentView = viewForRootNode(layout, self.frame.size);
     [self addSubview:contentView];
@@ -129,9 +129,10 @@ using namespace VZ;
     VZFTextNode *nameNode = [VZFTextNode newWithTextAttributes:
                              {
                                  .text = name,
+                                 .lines = 0,
                                  ._font = [UIFont systemFontOfSize:20.0f],
                                  .color = [UIColor redColor],
-                                 .alignment = NSTextAlignmentCenter
+                                 .alignment = NSTextAlignmentLeft
                              }
                                                      NodeSpecs:
                              {
