@@ -22,9 +22,8 @@
     demoView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:demoView];
     
-    [demoView setName:@"测试布局" title:@"子title"];
+    [demoView setName:@"大大标题VZFlexLayou大标题VZFlexLayou大标题VZFlexLayou标题VZFlexLayout" title:@"小题VZF题VZF题VZF题VZF题VZF标题VZFlexLayout"];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
