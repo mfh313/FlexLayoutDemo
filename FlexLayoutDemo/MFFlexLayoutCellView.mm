@@ -8,7 +8,6 @@
 
 #import "MFFlexLayoutCellView.h"
 #import <VZFlexLayout/VZFlexLayout.h>
-#import <VZFlexLayout/VZFlexNode.h>
 
 using namespace VZ;
 
@@ -20,8 +19,8 @@ using namespace VZ;
     
     NodeLayout layout;
 //    layout = [self stackNodeLayoutForName:name title:title];
-    layout = [self testTextNodeForName:name];
-//    layout = [self testImageNode];
+//    layout = [self testTextNodeForName:name];
+    layout = [self testImageNode];
     UIView *contentView = viewForRootNode(layout, self.frame.size);
     [self addSubview:contentView];
 }
