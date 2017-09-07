@@ -169,21 +169,16 @@ using namespace VZ;
 //按钮
 -(NodeLayout)testButtonNode
 {
-    VZFImageNode *imageNode = [VZFImageNode newWithImageAttributes:{
-        .image = [UIImage imageNamed:@"avtar"],
-        .contentMode = UIViewContentModeScaleAspectFit
+    VZFButtonNode *buttonNode = [VZFButtonNode newWithButtonAttributes:
+    {
+        
     }
-                                                         NodeSpecs:{
-                                                             .width = 80.0,
-                                                             .height = 80.0f,
-                                                             .backgroundColor = [UIColor blackColor],
-                                                             .marginLeft = flexLength(10, FlexLengthTypeDefault),
-                                                             .marginTop = flexLength(10, FlexLengthTypeDefault),
-                                                             .marginRight = flexLength(10, FlexLengthTypeDefault),
-                                                             .marginBottom = flexLength(10, FlexLengthTypeDefault)
-                                                         }];
+                                                             NodeSpecs:
+    {
+        
+    }];
     
-    return [imageNode computeLayoutThatFits:self.frame.size];
+    return [buttonNode computeLayoutThatFits:self.frame.size];
 }
 
 @end
