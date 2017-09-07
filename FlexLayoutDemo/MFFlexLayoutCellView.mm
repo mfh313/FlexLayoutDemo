@@ -17,35 +17,34 @@ using namespace VZ;
 -(void)setName:(NSString *)name title:(NSString *)title
 {
     NodeLayout layout = [self nodeLayoutForName:name title:title];
-    
     UIView *contentView = viewForRootNode(layout, self.frame.size);
     [self addSubview:contentView];
+    
+    self.backgroundColor = [UIColor lightGrayColor];
 }
 
--(NodeLayout)nodeLayoutForName:(NSString *)name title:(NSString *)title
+-(NodeLayout)nodeLayoutForName:(NSString *)name title:(NSString *)titleString
 {
-    VZFTextNode *nameNode = [VZFTextNode newWithTextAttributes:
-                             {
-                                 .text = name,
-                                 ._font = [UIFont systemFontOfSize:20.0f],
-                                 .color = [UIColor redColor],
-                                 .alignment = NSTextAlignmentCenter
-                             }
-                                                     NodeSpecs:
-                             {
-                                 .width = 100.0,
-                                 .height = 21.0f,
-                                 .backgroundColor = [UIColor blueColor]
-                             }
-                             ];
-    return [nameNode computeLayoutThatFits:self.frame.size];
+    //文本
+//    VZFTextNode *nameNode = [VZFTextNode newWithTextAttributes:
+//                             {
+//                                 .text = name,
+//                                 ._font = [UIFont systemFontOfSize:20.0f],
+//                                 .color = [UIColor redColor],
+//                                 .alignment = NSTextAlignmentCenter
+//                             }
+//                                                     NodeSpecs:
+//                             {
+//                                 .width = 100.0,
+//                                 .height = 21.0f,
+//                                 .backgroundColor = [UIColor blueColor],
+//                                 .marginLeft = flexLength(10, FlexLengthTypeDefault),
+//                                 .marginTop = flexLength(10, FlexLengthTypeDefault)
+//                             }
+//                             ];
+//    return [nameNode computeLayoutThatFits:self.frame.size];
     
-//    VZFButtonNode *buttonNode = [VZFButtonNode newWithButtonAttributes:{
-//        
-//    }
-//                                                             NodeSpecs:{
-//    }];
-
+    //图片
 //    VZFImageNode *imageNode = [VZFImageNode newWithImageAttributes:{
 //        .image = [UIImage imageNamed:@"avtar"],
 //        .contentMode = UIViewContentModeScaleAspectFit
@@ -53,10 +52,15 @@ using namespace VZ;
 //                                                         NodeSpecs:{
 //                                                             .width = 80.0,
 //                                                             .height = 80.0f,
-//                                                             .backgroundColor = [UIColor blackColor]
+//                                                             .backgroundColor = [UIColor blackColor],
+//                                                             .marginLeft = flexLength(10, FlexLengthTypeDefault),
+//                                                             .marginTop = flexLength(10, FlexLengthTypeDefault)
 //                                                         }];
 //    
 //    return [imageNode computeLayoutThatFits:self.frame.size];
+    
+    VZFStackNode *stackNode = [VZFStackNode newWithStackAttributes:{} NodeSpecs:{} Children:{}];
+    return [stackNode computeLayoutThatFits:self.frame.size];
 }
 
 @end
