@@ -16,37 +16,47 @@ using namespace VZ;
 
 -(void)setName:(NSString *)name title:(NSString *)title
 {
-    VZFlexNode *node = [VZFlexNode new];
-    node.direction = FlexHorizontal;
-    node.alignContent = FlexCenter;
+    NodeLayout layout = [self nodeLayoutForName:name title:title];
     
-    VZFTextNode *textNode = [VZFTextNode newWithTextAttributes:
+    UIView *contentView = viewForRootNode(layout, self.frame.size);
+    [self addSubview:contentView];
+}
+
+-(NodeLayout)nodeLayoutForName:(NSString *)name title:(NSString *)title
+{
+    VZFTextNode *nameNode = [VZFTextNode newWithTextAttributes:
                              {
                                  .text = name,
-                                 ._font = [UIFont systemFontOfSize:14.0f],
-                                 .color = [UIColor redColor]
+                                 ._font = [UIFont systemFontOfSize:20.0f],
+                                 .color = [UIColor redColor],
+                                 .alignment = NSTextAlignmentCenter
                              }
                                                      NodeSpecs:
                              {
                                  .width = 100.0,
-                                 .height = 10.0
+                                 .height = 21.0f,
+                                 .backgroundColor = [UIColor blueColor]
                              }
                              ];
+    return [nameNode computeLayoutThatFits:self.frame.size];
     
-    VZFNodeViewManager *viewManger = [[VZFNodeViewManager alloc] initWithView:self shouldAutoReset:YES];
-    UIView *subView = [viewManger viewForNode:textNode frame:self.frame];
-    subView.frame = self.bounds;
-    [self addSubview:subView];
-}
+//    VZFButtonNode *buttonNode = [VZFButtonNode newWithButtonAttributes:{
+//        
+//    }
+//                                                             NodeSpecs:{
+//    }];
 
--(VZFlexNode *)flexNodeName:(NSString *)name title:(NSString *)title
-{
-    VZFlexNode *node = [VZFlexNode new];
-    node.direction = FlexHorizontal;
-    node.width = flexLength(CGRectGetWidth(self.bounds), FlexLengthTypeDefault);
-    node.height = flexLength(CGRectGetHeight(self.bounds), FlexLengthTypeDefault);
-    
-    return node;
+//    VZFImageNode *imageNode = [VZFImageNode newWithImageAttributes:{
+//        .image = [UIImage imageNamed:@"avtar"],
+//        .contentMode = UIViewContentModeScaleAspectFit
+//    }
+//                                                         NodeSpecs:{
+//                                                             .width = 80.0,
+//                                                             .height = 80.0f,
+//                                                             .backgroundColor = [UIColor blackColor]
+//                                                         }];
+//    
+//    return [imageNode computeLayoutThatFits:self.frame.size];
 }
 
 @end
