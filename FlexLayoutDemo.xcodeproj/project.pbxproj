@@ -135,7 +135,7 @@
 				TargetAttributes = {
 					AC4449851F56955300292E30 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 2C97V99SA2;
+						DevelopmentTeam = G782L57G45;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -301,7 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2C97V99SA2;
+				DEVELOPMENT_TEAM = G782L57G45;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FlexLayoutDemo",
@@ -309,7 +309,7 @@
 				INFOPLIST_FILE = FlexLayoutDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.mafanghua.FlexLayoutDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.mafanghua.FlexLayoutDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -318,7 +318,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 2C97V99SA2;
+				DEVELOPMENT_TEAM = G782L57G45;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FlexLayoutDemo",
@@ -326,7 +326,7 @@
 				INFOPLIST_FILE = FlexLayoutDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.mafanghua.FlexLayoutDemo;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.mafanghua.FlexLayoutDemo1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -350,6 +350,7 @@
 				AC44499F1F56955300292E30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
