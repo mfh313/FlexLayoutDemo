@@ -18,9 +18,9 @@ using namespace VZ;
     self.backgroundColor = [UIColor lightGrayColor];
     
     NodeLayout layout;
-//    layout = [self stackNodeLayoutForName:name title:title];
+    layout = [self stackNodeLayoutForName:name title:title];
 //    layout = [self testTextNodeForName:name];
-    layout = [self testImageNode];
+//    layout = [self testImageNode];
     UIView *contentView = viewForRootNode(layout, self.frame.size);
     [self addSubview:contentView];
 }

@@ -22,7 +22,7 @@
     demoView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:demoView];
     
-    [demoView setName:@"大大标题VZFlexLayo大大标题VZFlexLayou大标题VZFl大大标题VZFlexLayou大标题VZFl大大标题VZFlexLayou大标题VZFl大大标题VZFlexLayou大标题VZFl大大标题VZFlexLayou大标题VZFl大大标题VZFlexLayou大标题VZFl大大标题VZFlexLayou大标题VZFl大大标题VZFlexLayou大标题VZFl大大标题VZFlexLayou大标题VZFl大大标题VZFlexLayou大标题VZFl大大标题VZFlexLayou大标题VZFl大大标题VZFlexLayou大标题VZFl大大标题VZFlexLayou大标题VZFl大大标题VZFlexLayou大标题VZFlu大标题VZFlexLayou大标题VZFlexLayou标题VZFlexLayout" title:@"小题VZF题VZF题VZF题VZF题VZF标题VZFlexLayout"];
+    [demoView setName:@"大大标题" title:@"小题"];
 }
 
 - (void)didReceiveMemoryWarning {
