@@ -16,6 +16,7 @@
 		AC4449A31F5695C000292E30 /* VZFlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4449A21F5695C000292E30 /* VZFlexLayout.framework */; };
 		AC4449A41F5695C000292E30 /* VZFlexLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC4449A21F5695C000292E30 /* VZFlexLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC4449A81F56968D00292E30 /* MFFlexLayoutCellView.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC4449A71F56968D00292E30 /* MFFlexLayoutCellView.mm */; };
+		ACB2324A1F7C81730022542E /* MFPageTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACB232491F7C81730022542E /* MFPageTagView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,8 @@
 		AC4449A21F5695C000292E30 /* VZFlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VZFlexLayout.framework; path = FlexLayoutDemo/VZFlexLayout.framework; sourceTree = "<group>"; };
 		AC4449A61F56968D00292E30 /* MFFlexLayoutCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFFlexLayoutCellView.h; sourceTree = "<group>"; };
 		AC4449A71F56968D00292E30 /* MFFlexLayoutCellView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MFFlexLayoutCellView.mm; sourceTree = "<group>"; };
+		ACB232481F7C81730022542E /* MFPageTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFPageTagView.h; sourceTree = "<group>"; };
+		ACB232491F7C81730022542E /* MFPageTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFPageTagView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,7 @@
 				AC4449901F56955300292E30 /* ViewController.m */,
 				AC4449A61F56968D00292E30 /* MFFlexLayoutCellView.h */,
 				AC4449A71F56968D00292E30 /* MFFlexLayoutCellView.mm */,
+				ACB232471F7C81530022542E /* MFPageController */,
 				AC4449921F56955300292E30 /* Main.storyboard */,
 				AC4449951F56955300292E30 /* Assets.xcassets */,
 				AC4449971F56955300292E30 /* LaunchScreen.storyboard */,
@@ -101,6 +105,15 @@
 				AC44498A1F56955300292E30 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ACB232471F7C81530022542E /* MFPageController */ = {
+			isa = PBXGroup;
+			children = (
+				ACB232481F7C81730022542E /* MFPageTagView.h */,
+				ACB232491F7C81730022542E /* MFPageTagView.m */,
+			);
+			path = MFPageController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -177,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC4449911F56955300292E30 /* ViewController.m in Sources */,
+				ACB2324A1F7C81730022542E /* MFPageTagView.m in Sources */,
 				AC44498E1F56955300292E30 /* AppDelegate.m in Sources */,
 				AC4449A81F56968D00292E30 /* MFFlexLayoutCellView.mm in Sources */,
 				AC44498B1F56955300292E30 /* main.m in Sources */,
