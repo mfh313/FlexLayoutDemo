@@ -187,12 +187,17 @@
     UIImage *upImage = [UIImage imageNamed:@"up"];
     UIImageView *upimageView = [[UIImageView alloc] initWithImage:upImage];
     upimageView.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
+    upimageView.backgroundColor = [UIColor clearColor];
     [m_innerUpView addSubview:upimageView];
     
     CGFloat innerMenuUpArrowOffSetX = (CGRectGetWidth(m_innerUpView.frame) - upImage.size.width) / 2;
     if ([self.m_dataSource respondsToSelector:@selector(innerMenuUpArrowOffSetX)]) {
         innerMenuUpArrowOffSetX = [self.m_dataSource innerMenuUpArrowOffSetX];
+        if (innerMenuUpArrowOffSetX > CGRectGetWidth(m_innerUpView.frame) - upImage.size.width) {
+            innerMenuUpArrowOffSetX = CGRectGetWidth(m_innerUpView.frame) - upImage.size.width;
+        }
     }
+    
     upimageView.frame = CGRectMake(innerMenuUpArrowOffSetX, 0, upImage.size.width, upImage.size.height);
     
     UIImage *bottomImage = [UIImage imageNamed:@"color"];

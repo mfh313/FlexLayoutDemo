@@ -40,6 +40,11 @@
     [coverView reloadHighlightToIndex:1];
 }
 
+- (CGFloat)innerMenuUpArrowOffSetX
+{
+    return 220;
+}
+
 -(void)didSelectDropMenuIndex:(NSInteger)index
 {
     
