@@ -37,13 +37,13 @@
     [self.view addSubview:coverView];
     
     [coverView layoutMenuView];
-    [coverView reloadHighlightToIndex:3];
+    [coverView reloadHighlightToIndex:1];
 }
 
-//- (CGFloat)innerMenuUpArrowOffSetX
-//{
-//    return 220;
-//}
+- (CGFloat)innerMenuUpArrowOffSetX
+{
+    return 145;
+}
 
 -(void)didSelectDropMenuIndex:(NSInteger)index
 {
@@ -53,7 +53,7 @@
 - (CGPoint)innerMenuStartOrigin
 {
     CGRect touchButtonFrame = [_touchButton convertRect:_touchButton.bounds toView:self.view];
-    return CGPointMake(CGRectGetMidX(touchButtonFrame), CGRectGetMaxY(touchButtonFrame));
+    return CGPointMake(CGRectGetMidX(touchButtonFrame), CGRectGetMaxY(touchButtonFrame) + 5);
 }
 
 - (NSInteger)numberOfMenu
