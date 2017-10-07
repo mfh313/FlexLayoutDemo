@@ -16,6 +16,7 @@
 		AC4449A31F5695C000292E30 /* VZFlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4449A21F5695C000292E30 /* VZFlexLayout.framework */; };
 		AC4449A41F5695C000292E30 /* VZFlexLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC4449A21F5695C000292E30 /* VZFlexLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC4449A81F56968D00292E30 /* MFFlexLayoutCellView.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC4449A71F56968D00292E30 /* MFFlexLayoutCellView.mm */; };
+		ACC039C31F885BB600AC8CDE /* MFCoverDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC039C21F885BB600AC8CDE /* MFCoverDropView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,8 @@
 		AC4449A21F5695C000292E30 /* VZFlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VZFlexLayout.framework; path = FlexLayoutDemo/VZFlexLayout.framework; sourceTree = "<group>"; };
 		AC4449A61F56968D00292E30 /* MFFlexLayoutCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFFlexLayoutCellView.h; sourceTree = "<group>"; };
 		AC4449A71F56968D00292E30 /* MFFlexLayoutCellView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MFFlexLayoutCellView.mm; sourceTree = "<group>"; };
+		ACC039C11F885BB600AC8CDE /* MFCoverDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCoverDropView.h; sourceTree = "<group>"; };
+		ACC039C21F885BB600AC8CDE /* MFCoverDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFCoverDropView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 				AC44498D1F56955300292E30 /* AppDelegate.m */,
 				AC44498F1F56955300292E30 /* ViewController.h */,
 				AC4449901F56955300292E30 /* ViewController.m */,
+				ACC039C11F885BB600AC8CDE /* MFCoverDropView.h */,
+				ACC039C21F885BB600AC8CDE /* MFCoverDropView.m */,
 				AC4449A61F56968D00292E30 /* MFFlexLayoutCellView.h */,
 				AC4449A71F56968D00292E30 /* MFFlexLayoutCellView.mm */,
 				AC4449921F56955300292E30 /* Main.storyboard */,
@@ -177,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC4449911F56955300292E30 /* ViewController.m in Sources */,
+				ACC039C31F885BB600AC8CDE /* MFCoverDropView.m in Sources */,
 				AC44498E1F56955300292E30 /* AppDelegate.m in Sources */,
 				AC4449A81F56968D00292E30 /* MFFlexLayoutCellView.mm in Sources */,
 				AC44498B1F56955300292E30 /* main.m in Sources */,
