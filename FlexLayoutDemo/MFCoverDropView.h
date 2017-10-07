@@ -17,7 +17,9 @@
 
 @optional
 - (CGFloat)innerMenuWidth;
-- (CGPoint)innerMenuUPArrowOffSetX;
+- (CGFloat)innerMenuItemHeight;
+- (CGFloat)innerMenuUpArrowOffSetX;
+
 
 @end
 
@@ -32,5 +34,7 @@
 
 @property (nonatomic,weak) id<MFCoverDropViewDataSource> m_dataSource;
 @property (nonatomic,weak) id<MFCoverDropViewDelegate> m_delegate;
+
+-(void)initInnerView;
 
 @end
