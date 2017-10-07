@@ -37,7 +37,7 @@
     [self.view addSubview:coverView];
     
     [coverView layoutMenuView];
-    [coverView reloadHighlightToIndex:1];
+    [coverView reloadHighlightToIndex:3];
 }
 
 //- (CGFloat)innerMenuUpArrowOffSetX
@@ -58,7 +58,7 @@
 
 - (NSInteger)numberOfMenu
 {
-    return 3;
+    return 6;
 }
 
 - (NSString *)titleForIndex:(NSInteger)index
