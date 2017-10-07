@@ -19,22 +19,27 @@
 - (CGFloat)innerMenuWidth;
 - (CGFloat)innerMenuItemHeight;
 - (CGFloat)innerMenuUpArrowOffSetX;
-
+- (UIColor *)titleColorForIndex:(NSInteger)index;
+- (UIColor *)titleHighlightColorForIndex:(NSInteger)index;
+- (UIColor *)backgroundColorForIndex:(NSInteger)index;
+- (UIColor *)backgroundColorHighlightColorForIndex:(NSInteger)index;
 
 @end
 
 
 @protocol MFCoverDropViewDelegate <NSObject>
+
 @optional
--(void)didSelectDropMenuIndex:(NSInteger)index;
+- (void)didSelectDropMenuIndex:(NSInteger)index;
 
 @end
 
-@interface MFCoverDropView : UIView
+@interface MFCoverDropView : UIControl
 
 @property (nonatomic,weak) id<MFCoverDropViewDataSource> m_dataSource;
 @property (nonatomic,weak) id<MFCoverDropViewDelegate> m_delegate;
 
--(void)initInnerView;
+-(void)layoutMenuView;
+-(void)reloadHighlightToIndex:(NSInteger)index;
 
 @end

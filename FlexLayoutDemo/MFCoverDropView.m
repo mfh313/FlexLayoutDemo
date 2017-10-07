@@ -7,12 +7,18 @@
 //
 
 #import "MFCoverDropView.h"
+#import "MFCoverDropTagView.h"
+#import "HexColors.h"
 
 @interface MFCoverDropView ()
 {
-    UIView *m_innerUpView;
     UIView *m_innerView;
+    UIView *m_innerUpView;
+    UIScrollView *m_innerMenuView;
 }
+
+@property (strong, nonatomic) NSMutableArray <MFCoverDropTagView *> *tagViewsCache;
+@property (assign, nonatomic) NSInteger index;
 
 @end
 
@@ -23,14 +29,17 @@
     self = [super initWithFrame:frame];
     if (self) {
         
+        self.backgroundColor = [UIColor hx_colorWithHexString:@"000000" alpha:0.1];
+        self.userInteractionEnabled = YES;
+        [self addTarget:self action:@selector(onClickDismiss:) forControlEvents:UIControlEventTouchUpInside];
     }
     
     return self;
 }
 
--(void)initInnerView
+-(void)layoutMenuView
 {
-    CGFloat innerWidth = 240;
+    CGFloat innerWidth = 200;
     if ([self.m_dataSource respondsToSelector:@selector(innerMenuWidth)]) {
         innerWidth = [self.m_dataSource innerMenuWidth];
     }
@@ -46,23 +55,132 @@
     }
     
     m_innerView = [[UIView alloc] initWithFrame:CGRectZero];
-    m_innerView.backgroundColor = [UIColor redColor];
+    m_innerView.backgroundColor = [UIColor clearColor];
     CGFloat innerRealHeight = innerHeight + [self menuUpViewHeight];
     m_innerView.frame = CGRectMake(menuStartOrigin.x - innerWidth / 2, menuStartOrigin.y, innerWidth,innerRealHeight);
     [self addSubview:m_innerView];
     
     [self initMenuUpView];
+    
+    [self layoutInnerMenuView];
 }
 
--(CGFloat)menuUpViewHeight
+-(void)layoutInnerMenuView
 {
-    return 9;
+    m_innerMenuView = [[UIScrollView alloc] initWithFrame:CGRectZero];
+    m_innerMenuView.directionalLockEnabled = YES;
+    m_innerMenuView.scrollsToTop = NO;
+    m_innerMenuView.showsHorizontalScrollIndicator = NO;
+    m_innerMenuView.showsVerticalScrollIndicator = YES;
+    m_innerMenuView.backgroundColor = [UIColor lightGrayColor];
+    [m_innerView addSubview:m_innerMenuView];
+    
+    CGFloat innerHeight = 0;
+    if ([self.m_dataSource respondsToSelector:@selector(innerMenuItemHeight)]) {
+        innerHeight = [self.m_dataSource numberOfMenu] * [self.m_dataSource innerMenuItemHeight];
+    }
+    
+    CGRect innerMenuFrame = CGRectMake(0, CGRectGetMaxY(m_innerUpView.frame), CGRectGetWidth(m_innerView.frame), innerHeight);
+    m_innerMenuView.frame = innerMenuFrame;
+    
+    self.tagViewsCache = [NSMutableArray new];
+    for (UIView *view in m_innerMenuView.subviews) {
+        [view removeFromSuperview];
+    }
+    
+    CGFloat offsetY = 0;
+    CGFloat itemVSpace = 0;
+    for (int i = 0; i < [self.m_dataSource numberOfMenu]; i++) {
+        
+        CGFloat itemHeight = [self.m_dataSource respondsToSelector:@selector(innerMenuItemHeight)] ? [self.m_dataSource innerMenuItemHeight] : 44;
+        
+        MFCoverDropTagTitleView *titleView = [[MFCoverDropTagTitleView alloc] initWithFrame:CGRectMake(0, offsetY, CGRectGetWidth(m_innerMenuView.frame), itemHeight)];
+        if ([self.m_dataSource respondsToSelector:@selector(titleColorForIndex:)]) {
+            titleView.normalTitleColor = [self.m_dataSource titleColorForIndex:i];
+        }
+        else
+        {
+            titleView.normalTitleColor = [UIColor hx_colorWithHexString:@"2d2c2c"];
+        }
+        
+        if ([self.m_dataSource respondsToSelector:@selector(backgroundColorForIndex:)]) {
+            titleView.normalBGColor = [self.m_dataSource backgroundColorForIndex:i];
+        }
+        else
+        {
+            titleView.normalBGColor = [UIColor whiteColor];
+        }
+        
+        if ([self.m_dataSource respondsToSelector:@selector(titleHighlightColorForIndex:)]) {
+            titleView.highlightedTitleColor = [self.m_dataSource titleHighlightColorForIndex:i];
+        }
+        else
+        {
+            titleView.highlightedTitleColor = [UIColor whiteColor];
+        }
+        
+        if ([self.m_dataSource respondsToSelector:@selector(backgroundColorHighlightColorForIndex:)]) {
+            titleView.highlightedBgColor = [self.m_dataSource backgroundColorHighlightColorForIndex:i];
+        }
+        else
+        {
+            titleView.highlightedBgColor = [UIColor hx_colorWithHexString:@"232733"];
+        }
+        
+        titleView.title.text = [self.m_dataSource titleForIndex:i];
+        titleView.title.font = [UIFont systemFontOfSize:15.0];
+        
+        titleView.tag = i;
+        titleView.userInteractionEnabled = YES;
+        [titleView addTarget:self action:@selector(pressTab:) forControlEvents:UIControlEventTouchUpInside];
+        
+        [m_innerMenuView addSubview:titleView];
+        [self.tagViewsCache addObject:titleView];
+        offsetY += itemHeight + itemVSpace;
+    }
+    
+    [self reloadHighlight];
+    
+    m_innerMenuView.contentSize = CGSizeMake(offsetY, CGRectGetHeight(m_innerMenuView.frame));
+}
+
+- (void)pressTab:(UIControl *)sender
+{
+    NSInteger i = sender.tag;
+    if  (self.index == i) {
+        return;
+    }
+    
+    if ([self.m_delegate respondsToSelector:@selector(didSelectDropMenuIndex:)]) {
+        [self.m_delegate didSelectDropMenuIndex:i];
+    }
+    self.index = i;
+    [self reloadHighlight];
+    
+}
+
+- (void)reloadHighlightToIndex:(NSInteger)index
+{
+    self.index = index;
+    [self reloadHighlight];
+}
+
+- (void)reloadHighlight
+{
+    for (int i=0;i<self.tagViewsCache.count;i++) {
+        MFCoverDropTagView *view = (MFCoverDropTagView *)self.tagViewsCache[i];
+        if (i == self.index) {
+            [view highlightTagView];
+        } else {
+            [view unhighlightTagView];
+        }
+    }
 }
 
 -(void)initMenuUpView
 {
     m_innerUpView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(m_innerView.frame), [self menuUpViewHeight])];
-    m_innerUpView.backgroundColor = [UIColor blueColor];
+    m_innerUpView.backgroundColor = [UIColor clearColor];
     m_innerUpView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     [m_innerView addSubview:m_innerUpView];
     
@@ -82,6 +200,16 @@
     bottomView.frame = CGRectMake(0, CGRectGetHeight(m_innerUpView.frame) - bottomImage.size.height, CGRectGetWidth(m_innerUpView.frame), bottomImage.size.height);
     bottomView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
     [m_innerUpView addSubview:bottomView];
+}
+
+-(void)onClickDismiss:(UIControl *)sender
+{
+    [self removeFromSuperview];
+}
+
+-(CGFloat)menuUpViewHeight
+{
+    return 9;
 }
 
 @end

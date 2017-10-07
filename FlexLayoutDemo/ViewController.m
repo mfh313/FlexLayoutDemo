@@ -34,10 +34,15 @@
     MFCoverDropView *coverView = [[MFCoverDropView alloc] initWithFrame:self.view.frame];
     coverView.m_dataSource = self;
     coverView.m_delegate = self;
-    
-    [coverView initInnerView];
-    
     [self.view addSubview:coverView];
+    
+    [coverView layoutMenuView];
+    [coverView reloadHighlightToIndex:1];
+}
+
+-(void)didSelectDropMenuIndex:(NSInteger)index
+{
+    
 }
 
 - (CGPoint)innerMenuStartOrigin
@@ -53,12 +58,12 @@
 
 - (NSString *)titleForIndex:(NSInteger)index
 {
-    return @"测试";
+    return [NSString stringWithFormat:@"测试item=%@",@(index)];;
 }
 
 - (CGFloat)innerMenuItemHeight
 {
-    return 44.0;
+    return 40.0;
 }
 
 - (void)didReceiveMemoryWarning {
