@@ -27,10 +27,13 @@
     [demoView setName:@"大大标题" title:@"小题"];
     [self.view addSubview:demoView];
     
-    [self.view layoutIfNeeded];
+    CALayer *layer = [CALayer layer];
 }
 
 - (IBAction)onClickButton:(id)sender {
+    
+    [self.view layoutIfNeeded];
+    
     MFCoverDropView *coverView = [[MFCoverDropView alloc] initWithFrame:self.view.frame];
     coverView.m_dataSource = self;
     coverView.m_delegate = self;
