@@ -45,7 +45,7 @@
 
 - (CGFloat)innerMenuUpArrowOffSetX
 {
-    return 145;
+    return 120;
 }
 
 -(void)didSelectDropMenuIndex:(NSInteger)index
