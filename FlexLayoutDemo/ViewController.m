@@ -22,12 +22,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    [self addMFFlexLayoutCellView];
+    
+    CALayer *layer = [CALayer layer];
+}
+
+-(void)addMFFlexLayoutCellView
+{
     MFFlexLayoutCellView *demoView = [[MFFlexLayoutCellView alloc] initWithFrame:CGRectMake(0, 100, CGRectGetWidth(self.view.frame), 100)];
     demoView.backgroundColor = [UIColor clearColor];
     [demoView setName:@"大大标题" title:@"小题"];
     [self.view addSubview:demoView];
-    
-    CALayer *layer = [CALayer layer];
 }
 
 - (IBAction)onClickButton:(id)sender {
