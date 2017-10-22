@@ -16,8 +16,6 @@
 		AC4449A31F5695C000292E30 /* VZFlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4449A21F5695C000292E30 /* VZFlexLayout.framework */; };
 		AC4449A41F5695C000292E30 /* VZFlexLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC4449A21F5695C000292E30 /* VZFlexLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC4449A81F56968D00292E30 /* MFFlexLayoutCellView.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC4449A71F56968D00292E30 /* MFFlexLayoutCellView.mm */; };
-		AC87FC301F90879800822AB4 /* TestView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC87FC2F1F90879800822AB4 /* TestView.m */; };
-		AC87FC321F9087A700822AB4 /* TestView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC87FC311F9087A700822AB4 /* TestView.xib */; };
 		ACC039C31F885BB600AC8CDE /* MFCoverDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC039C21F885BB600AC8CDE /* MFCoverDropView.m */; };
 		ACC039C61F88B1D100AC8CDE /* MFCoverDropTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC039C51F88B1D000AC8CDE /* MFCoverDropTagView.m */; };
 		ACC039CA1F88C27A00AC8CDE /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC039C91F88C27A00AC8CDE /* HexColors.m */; };
@@ -51,9 +49,6 @@
 		AC4449A21F5695C000292E30 /* VZFlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VZFlexLayout.framework; path = FlexLayoutDemo/VZFlexLayout.framework; sourceTree = "<group>"; };
 		AC4449A61F56968D00292E30 /* MFFlexLayoutCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFFlexLayoutCellView.h; sourceTree = "<group>"; };
 		AC4449A71F56968D00292E30 /* MFFlexLayoutCellView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MFFlexLayoutCellView.mm; sourceTree = "<group>"; };
-		AC87FC2E1F90879800822AB4 /* TestView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestView.h; sourceTree = "<group>"; };
-		AC87FC2F1F90879800822AB4 /* TestView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestView.m; sourceTree = "<group>"; };
-		AC87FC311F9087A700822AB4 /* TestView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestView.xib; sourceTree = "<group>"; };
 		ACC039C11F885BB600AC8CDE /* MFCoverDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCoverDropView.h; sourceTree = "<group>"; };
 		ACC039C21F885BB600AC8CDE /* MFCoverDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFCoverDropView.m; sourceTree = "<group>"; };
 		ACC039C41F88B1D000AC8CDE /* MFCoverDropTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCoverDropTagView.h; sourceTree = "<group>"; };
@@ -98,9 +93,6 @@
 				AC44498D1F56955300292E30 /* AppDelegate.m */,
 				AC44498F1F56955300292E30 /* ViewController.h */,
 				AC4449901F56955300292E30 /* ViewController.m */,
-				AC87FC2E1F90879800822AB4 /* TestView.h */,
-				AC87FC2F1F90879800822AB4 /* TestView.m */,
-				AC87FC311F9087A700822AB4 /* TestView.xib */,
 				ACC039C11F885BB600AC8CDE /* MFCoverDropView.h */,
 				ACC039C21F885BB600AC8CDE /* MFCoverDropView.m */,
 				ACC039C41F88B1D000AC8CDE /* MFCoverDropTagView.h */,
@@ -194,7 +186,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC87FC321F9087A700822AB4 /* TestView.xib in Resources */,
 				AC4449991F56955300292E30 /* LaunchScreen.storyboard in Resources */,
 				AC4449961F56955300292E30 /* Assets.xcassets in Resources */,
 				AC4449941F56955300292E30 /* Main.storyboard in Resources */,
@@ -208,7 +199,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC87FC301F90879800822AB4 /* TestView.m in Sources */,
 				AC4449911F56955300292E30 /* ViewController.m in Sources */,
 				ACC039CA1F88C27A00AC8CDE /* HexColors.m in Sources */,
 				ACC039C31F885BB600AC8CDE /* MFCoverDropView.m in Sources */,
