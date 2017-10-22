@@ -141,7 +141,7 @@
     
     [self reloadHighlight];
     
-    m_innerMenuView.contentSize = CGSizeMake(offsetY, CGRectGetHeight(m_innerMenuView.frame));
+    m_innerMenuView.contentSize = CGSizeMake(0, CGRectGetHeight(m_innerMenuView.frame));
 }
 
 - (void)pressTab:(UIControl *)sender
