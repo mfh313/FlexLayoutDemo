@@ -1,0 +1,18 @@
+{
+  "Mac" : [
+
+  ],
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "commitish" : "a9296e7cf5750386315bbb049bb554ec5bbc40e2",
+  "iOS" : [
+    {
+      "name" : "MZAppearance",
+      "hash" : "f28a0b6ac41d9494199497e2f462c48f5c1c052c009a90d58e66f7c3d36dbce6"
+    }
+  ]
+}
