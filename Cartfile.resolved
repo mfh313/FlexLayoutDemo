@@ -1,3 +1,4 @@
 github "Vizzle/VZFlexLayout" "aa6ed2d33b37ffaf1656d10c015c6c22e1283f9f"
+github "facebook/ComponentKit" "0.20"
 github "m1entus/MZAppearance" "a9296e7cf5750386315bbb049bb554ec5bbc40e2"
 github "m1entus/MZFormSheetPresentationController" "194dcd38e5ff1e175e20bda55d852cb3021e4b19"

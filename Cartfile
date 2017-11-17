@@ -1,2 +1,3 @@
 github "Vizzle/VZFlexLayout" "master"
 github "m1entus/MZFormSheetPresentationController" "master"
+github "facebook/ComponentKit" ~> 0.20
