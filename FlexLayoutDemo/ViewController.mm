@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "MFFlexLayoutCellView.h"
 #import "MFCoverDropView.h"
-#import <ComponentKit/ComponentKit.h>
+#import "MFStackDemoComponent.h"
 
 @interface ViewController () <MFCoverDropViewDataSource,MFCoverDropViewDelegate>
 {
