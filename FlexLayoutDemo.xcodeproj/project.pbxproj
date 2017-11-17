@@ -7,9 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5241E3A1FBF297000B6B844 /* MZFormSheetPresentationController.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5241E371FBF297000B6B844 /* MZFormSheetPresentationController.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5241E3B1FBF297000B6B844 /* ComponentKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5241E381FBF297000B6B844 /* ComponentKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5241E3C1FBF297000B6B844 /* MZAppearance.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5241E391FBF297000B6B844 /* MZAppearance.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A5241E3D1FBF2A1F00B6B844 /* ComponentKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5241E381FBF297000B6B844 /* ComponentKit.framework */; };
+		A5241E3E1FBF2A1F00B6B844 /* MZAppearance.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5241E391FBF297000B6B844 /* MZAppearance.framework */; };
+		A5241E3F1FBF2A1F00B6B844 /* MZFormSheetPresentationController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5241E371FBF297000B6B844 /* MZFormSheetPresentationController.framework */; };
+		A5241E421FBF2AA500B6B844 /* MFStackDemoComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5241E411FBF2AA500B6B844 /* MFStackDemoComponent.mm */; };
 		AC44498B1F56955300292E30 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC44498A1F56955300292E30 /* main.m */; };
 		AC44498E1F56955300292E30 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC44498D1F56955300292E30 /* AppDelegate.m */; };
-		AC4449911F56955300292E30 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4449901F56955300292E30 /* ViewController.m */; };
+		AC4449911F56955300292E30 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC4449901F56955300292E30 /* ViewController.mm */; };
 		AC4449941F56955300292E30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4449921F56955300292E30 /* Main.storyboard */; };
 		AC4449961F56955300292E30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC4449951F56955300292E30 /* Assets.xcassets */; };
 		AC4449991F56955300292E30 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC4449971F56955300292E30 /* LaunchScreen.storyboard */; };
@@ -28,6 +35,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				A5241E3A1FBF297000B6B844 /* MZFormSheetPresentationController.framework in Embed Frameworks */,
+				A5241E3B1FBF297000B6B844 /* ComponentKit.framework in Embed Frameworks */,
+				A5241E3C1FBF297000B6B844 /* MZAppearance.framework in Embed Frameworks */,
 				AC4449A41F5695C000292E30 /* VZFlexLayout.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -36,12 +46,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A5241E371FBF297000B6B844 /* MZFormSheetPresentationController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MZFormSheetPresentationController.framework; path = Carthage/Build/iOS/MZFormSheetPresentationController.framework; sourceTree = "<group>"; };
+		A5241E381FBF297000B6B844 /* ComponentKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ComponentKit.framework; path = Carthage/Build/iOS/ComponentKit.framework; sourceTree = "<group>"; };
+		A5241E391FBF297000B6B844 /* MZAppearance.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MZAppearance.framework; path = Carthage/Build/iOS/MZAppearance.framework; sourceTree = "<group>"; };
+		A5241E401FBF2AA500B6B844 /* MFStackDemoComponent.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; path = MFStackDemoComponent.h; sourceTree = "<group>"; };
+		A5241E411FBF2AA500B6B844 /* MFStackDemoComponent.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = MFStackDemoComponent.mm; sourceTree = "<group>"; };
 		AC4449861F56955300292E30 /* FlexLayoutDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlexLayoutDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC44498A1F56955300292E30 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AC44498C1F56955300292E30 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AC44498D1F56955300292E30 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AC44498F1F56955300292E30 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AC4449901F56955300292E30 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AC44498F1F56955300292E30 /* ViewController.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp.preprocessed; path = ViewController.h; sourceTree = "<group>"; };
+		AC4449901F56955300292E30 /* ViewController.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		AC4449931F56955300292E30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC4449951F56955300292E30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC4449981F56955300292E30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +77,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5241E3D1FBF2A1F00B6B844 /* ComponentKit.framework in Frameworks */,
+				A5241E3E1FBF2A1F00B6B844 /* MZAppearance.framework in Frameworks */,
+				A5241E3F1FBF2A1F00B6B844 /* MZFormSheetPresentationController.framework in Frameworks */,
 				AC4449A31F5695C000292E30 /* VZFlexLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,11 +87,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A5241E301FBF287900B6B844 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5241E381FBF297000B6B844 /* ComponentKit.framework */,
+				A5241E391FBF297000B6B844 /* MZAppearance.framework */,
+				A5241E371FBF297000B6B844 /* MZFormSheetPresentationController.framework */,
+				AC4449A21F5695C000292E30 /* VZFlexLayout.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC44497D1F56955300292E30 = {
 			isa = PBXGroup;
 			children = (
-				AC4449A21F5695C000292E30 /* VZFlexLayout.framework */,
 				AC4449881F56955300292E30 /* FlexLayoutDemo */,
+				A5241E301FBF287900B6B844 /* Frameworks */,
 				AC4449871F56955300292E30 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,7 +121,9 @@
 				AC44498C1F56955300292E30 /* AppDelegate.h */,
 				AC44498D1F56955300292E30 /* AppDelegate.m */,
 				AC44498F1F56955300292E30 /* ViewController.h */,
-				AC4449901F56955300292E30 /* ViewController.m */,
+				AC4449901F56955300292E30 /* ViewController.mm */,
+				A5241E401FBF2AA500B6B844 /* MFStackDemoComponent.h */,
+				A5241E411FBF2AA500B6B844 /* MFStackDemoComponent.mm */,
 				ACC039C11F885BB600AC8CDE /* MFCoverDropView.h */,
 				ACC039C21F885BB600AC8CDE /* MFCoverDropView.m */,
 				ACC039C41F88B1D000AC8CDE /* MFCoverDropTagView.h */,
@@ -199,8 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC4449911F56955300292E30 /* ViewController.m in Sources */,
+				AC4449911F56955300292E30 /* ViewController.mm in Sources */,
 				ACC039CA1F88C27A00AC8CDE /* HexColors.m in Sources */,
+				A5241E421FBF2AA500B6B844 /* MFStackDemoComponent.mm in Sources */,
 				ACC039C31F885BB600AC8CDE /* MFCoverDropView.m in Sources */,
 				AC44498E1F56955300292E30 /* AppDelegate.m in Sources */,
 				ACC039C61F88B1D100AC8CDE /* MFCoverDropTagView.m in Sources */,
@@ -331,6 +363,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FlexLayoutDemo",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = FlexLayoutDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -348,6 +381,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/FlexLayoutDemo",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = FlexLayoutDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

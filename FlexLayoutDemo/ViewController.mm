@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "MFFlexLayoutCellView.h"
 #import "MFCoverDropView.h"
+#import <ComponentKit/ComponentKit.h>
 
 @interface ViewController () <MFCoverDropViewDataSource,MFCoverDropViewDelegate>
 {
@@ -21,10 +22,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    [self addMFFlexLayoutCellView];
-    
-    CALayer *layer = [CALayer layer];
+
+}
+
+//https://mp.weixin.qq.com/s?__biz=MzI1MTA1MzM2Nw==&mid=2649797021&idx=1&sn=424b8d3d5de80f27d762a0009a990367&chksm=f1fcc5c5c68b4cd33e985c2c49fab8a13d8f4952ae938395477e56b3f2b467aa0a231855b9d9&scene=38#wechat_redirect
+
+-(void)testVZFlexLayout
+{
+    [self addMFFlexLayoutCellView];
 }
 
 -(void)addMFFlexLayoutCellView
