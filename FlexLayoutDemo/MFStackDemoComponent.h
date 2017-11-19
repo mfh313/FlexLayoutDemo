@@ -7,7 +7,8 @@
 //
 
 #import <ComponentKit/ComponentKit.h>
+#import <ComponentKit/CKStackLayoutComponent.h>
 
-@interface MFStackDemoComponent : CKStackLayoutComponent
+@interface MFStackDemoComponent : CKCompositeComponent
 
 @end
