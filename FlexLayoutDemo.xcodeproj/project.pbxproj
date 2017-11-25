@@ -23,6 +23,8 @@
 		AC4449A31F5695C000292E30 /* VZFlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4449A21F5695C000292E30 /* VZFlexLayout.framework */; };
 		AC4449A41F5695C000292E30 /* VZFlexLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC4449A21F5695C000292E30 /* VZFlexLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC4449A81F56968D00292E30 /* MFFlexLayoutCellView.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC4449A71F56968D00292E30 /* MFFlexLayoutCellView.mm */; };
+		AC92F2F71FC93A0D009AC9BF /* ICSDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC92F2F41FC93A0D009AC9BF /* ICSDrawerController.m */; };
+		AC92F2F81FC93A0D009AC9BF /* ICSDropShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC92F2F61FC93A0D009AC9BF /* ICSDropShadowView.m */; };
 		ACC039C31F885BB600AC8CDE /* MFCoverDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC039C21F885BB600AC8CDE /* MFCoverDropView.m */; };
 		ACC039C61F88B1D100AC8CDE /* MFCoverDropTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC039C51F88B1D000AC8CDE /* MFCoverDropTagView.m */; };
 		ACC039CA1F88C27A00AC8CDE /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC039C91F88C27A00AC8CDE /* HexColors.m */; };
@@ -64,6 +66,10 @@
 		AC4449A21F5695C000292E30 /* VZFlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VZFlexLayout.framework; path = FlexLayoutDemo/VZFlexLayout.framework; sourceTree = "<group>"; };
 		AC4449A61F56968D00292E30 /* MFFlexLayoutCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFFlexLayoutCellView.h; sourceTree = "<group>"; };
 		AC4449A71F56968D00292E30 /* MFFlexLayoutCellView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MFFlexLayoutCellView.mm; sourceTree = "<group>"; };
+		AC92F2F31FC93A0D009AC9BF /* ICSDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSDrawerController.h; sourceTree = "<group>"; };
+		AC92F2F41FC93A0D009AC9BF /* ICSDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSDrawerController.m; sourceTree = "<group>"; };
+		AC92F2F51FC93A0D009AC9BF /* ICSDropShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSDropShadowView.h; sourceTree = "<group>"; };
+		AC92F2F61FC93A0D009AC9BF /* ICSDropShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSDropShadowView.m; sourceTree = "<group>"; };
 		ACC039C11F885BB600AC8CDE /* MFCoverDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCoverDropView.h; sourceTree = "<group>"; };
 		ACC039C21F885BB600AC8CDE /* MFCoverDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFCoverDropView.m; sourceTree = "<group>"; };
 		ACC039C41F88B1D000AC8CDE /* MFCoverDropTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCoverDropTagView.h; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 			children = (
 				AC44498C1F56955300292E30 /* AppDelegate.h */,
 				AC44498D1F56955300292E30 /* AppDelegate.m */,
+				AC92F2F21FC93A0D009AC9BF /* ICSDrawerController */,
 				AC44498F1F56955300292E30 /* ViewController.h */,
 				AC4449901F56955300292E30 /* ViewController.mm */,
 				A5241E401FBF2AA500B6B844 /* MFStackDemoComponent.h */,
@@ -146,6 +153,17 @@
 				AC44498A1F56955300292E30 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC92F2F21FC93A0D009AC9BF /* ICSDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				AC92F2F31FC93A0D009AC9BF /* ICSDrawerController.h */,
+				AC92F2F41FC93A0D009AC9BF /* ICSDrawerController.m */,
+				AC92F2F51FC93A0D009AC9BF /* ICSDropShadowView.h */,
+				AC92F2F61FC93A0D009AC9BF /* ICSDropShadowView.m */,
+			);
+			path = ICSDrawerController;
 			sourceTree = "<group>";
 		};
 		ACC039C71F88C27A00AC8CDE /* HexColors */ = {
@@ -234,10 +252,12 @@
 				ACC039CA1F88C27A00AC8CDE /* HexColors.m in Sources */,
 				A5241E421FBF2AA500B6B844 /* MFStackDemoComponent.mm in Sources */,
 				ACC039C31F885BB600AC8CDE /* MFCoverDropView.m in Sources */,
+				AC92F2F71FC93A0D009AC9BF /* ICSDrawerController.m in Sources */,
 				AC44498E1F56955300292E30 /* AppDelegate.m in Sources */,
 				ACC039C61F88B1D100AC8CDE /* MFCoverDropTagView.m in Sources */,
 				AC4449A81F56968D00292E30 /* MFFlexLayoutCellView.mm in Sources */,
 				AC44498B1F56955300292E30 /* main.m in Sources */,
+				AC92F2F81FC93A0D009AC9BF /* ICSDropShadowView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
