@@ -27,6 +27,7 @@
 		AC92F2F81FC93A0D009AC9BF /* ICSDropShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC92F2F61FC93A0D009AC9BF /* ICSDropShadowView.m */; };
 		AC92F2FB1FC93C06009AC9BF /* MFLeftMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC92F2FA1FC93C06009AC9BF /* MFLeftMainViewController.m */; };
 		AC92F2FE1FC93C4B009AC9BF /* MFRightMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC92F2FD1FC93C4B009AC9BF /* MFRightMainViewController.m */; };
+		ACAFD3881FCBEADE00157334 /* MFRootPageMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACAFD3871FCBEADE00157334 /* MFRootPageMainViewController.m */; };
 		ACC039C31F885BB600AC8CDE /* MFCoverDropView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC039C21F885BB600AC8CDE /* MFCoverDropView.m */; };
 		ACC039C61F88B1D100AC8CDE /* MFCoverDropTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC039C51F88B1D000AC8CDE /* MFCoverDropTagView.m */; };
 		ACC039CA1F88C27A00AC8CDE /* HexColors.m in Sources */ = {isa = PBXBuildFile; fileRef = ACC039C91F88C27A00AC8CDE /* HexColors.m */; };
@@ -76,6 +77,9 @@
 		AC92F2FA1FC93C06009AC9BF /* MFLeftMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFLeftMainViewController.m; sourceTree = "<group>"; };
 		AC92F2FC1FC93C4B009AC9BF /* MFRightMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFRightMainViewController.h; sourceTree = "<group>"; };
 		AC92F2FD1FC93C4B009AC9BF /* MFRightMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFRightMainViewController.m; sourceTree = "<group>"; };
+		ACAFD3851FCBEADE00157334 /* MFRootPageMainProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFRootPageMainProtocol.h; sourceTree = "<group>"; };
+		ACAFD3861FCBEADE00157334 /* MFRootPageMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFRootPageMainViewController.h; sourceTree = "<group>"; };
+		ACAFD3871FCBEADE00157334 /* MFRootPageMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFRootPageMainViewController.m; sourceTree = "<group>"; };
 		ACC039C11F885BB600AC8CDE /* MFCoverDropView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCoverDropView.h; sourceTree = "<group>"; };
 		ACC039C21F885BB600AC8CDE /* MFCoverDropView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFCoverDropView.m; sourceTree = "<group>"; };
 		ACC039C41F88B1D000AC8CDE /* MFCoverDropTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCoverDropTagView.h; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 				AC92F2FA1FC93C06009AC9BF /* MFLeftMainViewController.m */,
 				AC92F2FC1FC93C4B009AC9BF /* MFRightMainViewController.h */,
 				AC92F2FD1FC93C4B009AC9BF /* MFRightMainViewController.m */,
+				ACAFD3841FCBEADE00157334 /* MFRootPageMain */,
 				A5241E401FBF2AA500B6B844 /* MFStackDemoComponent.h */,
 				A5241E411FBF2AA500B6B844 /* MFStackDemoComponent.mm */,
 				AC4449A61F56968D00292E30 /* MFFlexLayoutCellView.h */,
@@ -174,6 +179,16 @@
 				AC92F2F61FC93A0D009AC9BF /* ICSDropShadowView.m */,
 			);
 			path = ICSDrawerController;
+			sourceTree = "<group>";
+		};
+		ACAFD3841FCBEADE00157334 /* MFRootPageMain */ = {
+			isa = PBXGroup;
+			children = (
+				ACAFD3851FCBEADE00157334 /* MFRootPageMainProtocol.h */,
+				ACAFD3861FCBEADE00157334 /* MFRootPageMainViewController.h */,
+				ACAFD3871FCBEADE00157334 /* MFRootPageMainViewController.m */,
+			);
+			path = MFRootPageMain;
 			sourceTree = "<group>";
 		};
 		ACC039C71F88C27A00AC8CDE /* HexColors */ = {
@@ -267,6 +282,7 @@
 				AC92F2FB1FC93C06009AC9BF /* MFLeftMainViewController.m in Sources */,
 				ACC039C61F88B1D100AC8CDE /* MFCoverDropTagView.m in Sources */,
 				AC4449A81F56968D00292E30 /* MFFlexLayoutCellView.mm in Sources */,
+				ACAFD3881FCBEADE00157334 /* MFRootPageMainViewController.m in Sources */,
 				AC44498B1F56955300292E30 /* main.m in Sources */,
 				AC92F2F81FC93A0D009AC9BF /* ICSDropShadowView.m in Sources */,
 				AC92F2FE1FC93C4B009AC9BF /* MFRightMainViewController.m in Sources */,
