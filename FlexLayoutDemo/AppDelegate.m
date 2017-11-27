@@ -21,16 +21,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    
-    MFLeftMainViewController *leftVC = [MFLeftMainViewController new];
-    MFRightMainViewController *rightVC = [MFRightMainViewController new];
-    ICSDrawerController *drawer = [[ICSDrawerController alloc] initWithLeftViewController:leftVC
-                                                                     centerViewController:rightVC];
-    
-    self.window.rootViewController = drawer;
-    [self.window makeKeyAndVisible];
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    
+//    MFLeftMainViewController *leftVC = [MFLeftMainViewController new];
+//    MFRightMainViewController *rightVC = [MFRightMainViewController new];
+//    ICSDrawerController *drawer = [[ICSDrawerController alloc] initWithLeftViewController:leftVC
+//                                                                     centerViewController:rightVC];
+//    
+//    self.window.rootViewController = drawer;
+//    [self.window makeKeyAndVisible];
     return YES;
 }
 
