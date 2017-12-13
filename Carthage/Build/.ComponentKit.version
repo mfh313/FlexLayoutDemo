@@ -8,14 +8,14 @@
   "tvOS" : [
     {
       "name" : "ComponentKit",
-      "hash" : "c9e3663436eae0203881683f0214f063b79c5eafdc880801044c7b6de99fc667"
+      "hash" : "9938ba7321673ab541282c09f2ca15588a01432cf6d8ce6bfdef4ce6cf067d8e"
     }
   ],
   "commitish" : "0.20",
   "iOS" : [
     {
       "name" : "ComponentKit",
-      "hash" : "8c864129809abb75a32a84a4dbd97deb11635d1a00dc0a1ea7b602b43728293f"
+      "hash" : "24884657b379d1ee294716f93bdbe99abdcb8079d40e54ef668a237aa6902194"
     }
   ]
 }
