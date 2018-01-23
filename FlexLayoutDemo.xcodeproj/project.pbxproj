@@ -23,6 +23,8 @@
 		AC4449A31F5695C000292E30 /* VZFlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4449A21F5695C000292E30 /* VZFlexLayout.framework */; };
 		AC4449A41F5695C000292E30 /* VZFlexLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC4449A21F5695C000292E30 /* VZFlexLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC4449A81F56968D00292E30 /* MFFlexLayoutCellView.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC4449A71F56968D00292E30 /* MFFlexLayoutCellView.mm */; };
+		AC77FB9A2016CE6F00B3E6AB /* CameraScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC77FB992016CE6F00B3E6AB /* CameraScannerView.m */; };
+		AC77FB9C2016CEC500B3E6AB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC77FB9B2016CEC500B3E6AB /* AVFoundation.framework */; };
 		AC92F2F71FC93A0D009AC9BF /* ICSDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC92F2F41FC93A0D009AC9BF /* ICSDrawerController.m */; };
 		AC92F2F81FC93A0D009AC9BF /* ICSDropShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC92F2F61FC93A0D009AC9BF /* ICSDropShadowView.m */; };
 		AC92F2FB1FC93C06009AC9BF /* MFLeftMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC92F2FA1FC93C06009AC9BF /* MFLeftMainViewController.m */; };
@@ -69,6 +71,9 @@
 		AC4449A21F5695C000292E30 /* VZFlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VZFlexLayout.framework; path = FlexLayoutDemo/VZFlexLayout.framework; sourceTree = "<group>"; };
 		AC4449A61F56968D00292E30 /* MFFlexLayoutCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFFlexLayoutCellView.h; sourceTree = "<group>"; };
 		AC4449A71F56968D00292E30 /* MFFlexLayoutCellView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MFFlexLayoutCellView.mm; sourceTree = "<group>"; };
+		AC77FB982016CE6F00B3E6AB /* CameraScannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraScannerView.h; sourceTree = "<group>"; };
+		AC77FB992016CE6F00B3E6AB /* CameraScannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraScannerView.m; sourceTree = "<group>"; };
+		AC77FB9B2016CEC500B3E6AB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AC92F2F31FC93A0D009AC9BF /* ICSDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSDrawerController.h; sourceTree = "<group>"; };
 		AC92F2F41FC93A0D009AC9BF /* ICSDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSDrawerController.m; sourceTree = "<group>"; };
 		AC92F2F51FC93A0D009AC9BF /* ICSDropShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSDropShadowView.h; sourceTree = "<group>"; };
@@ -93,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC77FB9C2016CEC500B3E6AB /* AVFoundation.framework in Frameworks */,
 				A5241E3D1FBF2A1F00B6B844 /* ComponentKit.framework in Frameworks */,
 				A5241E3E1FBF2A1F00B6B844 /* MZAppearance.framework in Frameworks */,
 				A5241E3F1FBF2A1F00B6B844 /* MZFormSheetPresentationController.framework in Frameworks */,
@@ -106,6 +112,7 @@
 		A5241E301FBF287900B6B844 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC77FB9B2016CEC500B3E6AB /* AVFoundation.framework */,
 				A5241E381FBF297000B6B844 /* ComponentKit.framework */,
 				A5241E391FBF297000B6B844 /* MZAppearance.framework */,
 				A5241E371FBF297000B6B844 /* MZFormSheetPresentationController.framework */,
@@ -138,6 +145,8 @@
 				AC44498D1F56955300292E30 /* AppDelegate.m */,
 				AC44498F1F56955300292E30 /* ViewController.h */,
 				AC4449901F56955300292E30 /* ViewController.mm */,
+				AC77FB982016CE6F00B3E6AB /* CameraScannerView.h */,
+				AC77FB992016CE6F00B3E6AB /* CameraScannerView.m */,
 				AC92F2F91FC93C06009AC9BF /* MFLeftMainViewController.h */,
 				AC92F2FA1FC93C06009AC9BF /* MFLeftMainViewController.m */,
 				AC92F2FC1FC93C4B009AC9BF /* MFRightMainViewController.h */,
@@ -285,6 +294,7 @@
 				ACAFD3881FCBEADE00157334 /* MFRootPageMainViewController.m in Sources */,
 				AC44498B1F56955300292E30 /* main.m in Sources */,
 				AC92F2F81FC93A0D009AC9BF /* ICSDropShadowView.m in Sources */,
+				AC77FB9A2016CE6F00B3E6AB /* CameraScannerView.m in Sources */,
 				AC92F2FE1FC93C4B009AC9BF /* MFRightMainViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
