@@ -27,13 +27,33 @@
     [super viewDidLoad];
 
     m_cameraView = [[CameraScannerView alloc] initWithFrame:self.view.bounds];
+    m_cameraView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [m_cameraView initCaptureWithPreviewScale:0];
     [self.view addSubview:m_cameraView];
+    [self.view sendSubviewToBack:m_cameraView];
+    
+    [m_cameraView setHidden:YES];
 }
 
 -(void)testCameraView
 {
     [m_cameraView start];
+}
+
+- (IBAction)onClickButton:(id)sender {
+    
+    [m_cameraView setHidden:NO];
+    [self testCameraView];
+    
+    //    [self.view layoutIfNeeded];
+    //
+    //    MFCoverDropView *coverView = [[MFCoverDropView alloc] initWithFrame:self.view.frame];
+    //    coverView.m_dataSource = self;
+    //    coverView.m_delegate = self;
+    //    [self.view addSubview:coverView];
+    //
+    //    [coverView layoutMenuView];
+    //    [coverView reloadHighlightToIndex:1];
 }
 
 //https://mp.weixin.qq.com/s?__biz=MzI1MTA1MzM2Nw==&mid=2649797021&idx=1&sn=424b8d3d5de80f27d762a0009a990367&chksm=f1fcc5c5c68b4cd33e985c2c49fab8a13d8f4952ae938395477e56b3f2b467aa0a231855b9d9&scene=38#wechat_redirect
@@ -49,21 +69,6 @@
     demoView.backgroundColor = [UIColor clearColor];
     [demoView setName:@"大大标题" title:@"小题"];
     [self.view addSubview:demoView];
-}
-
-- (IBAction)onClickButton:(id)sender {
-    
-    [self testCameraView];
-    
-//    [self.view layoutIfNeeded];
-//
-//    MFCoverDropView *coverView = [[MFCoverDropView alloc] initWithFrame:self.view.frame];
-//    coverView.m_dataSource = self;
-//    coverView.m_delegate = self;
-//    [self.view addSubview:coverView];
-//
-//    [coverView layoutMenuView];
-//    [coverView reloadHighlightToIndex:1];
 }
 
 - (CGFloat)innerMenuUpArrowOffSetX

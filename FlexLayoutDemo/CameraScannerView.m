@@ -26,7 +26,7 @@
         [_captureOutput setMetadataObjectsDelegate:self queue:dispatch_get_main_queue()];
         
         AVCaptureConnection *connection =[_captureOutput connectionWithMediaType:AVMediaTypeMetadata];
-        connection.videoOrientation = AVCaptureVideoOrientationLandscapeRight;//[self videoOrientationFromCurrentDeviceOrientation];
+        connection.videoOrientation = (AVCaptureVideoOrientation)[[UIApplication sharedApplication] statusBarOrientation];
         
         //初始化链接对象
         _captureSession = [[AVCaptureSession alloc] init];
@@ -41,8 +41,8 @@
         _captureOutput.metadataObjectTypes = @[AVMetadataObjectTypeCode128Code,AVMetadataObjectTypeQRCode,AVMetadataObjectTypeEAN13Code, AVMetadataObjectTypeEAN8Code];
         
         _prevLayer = [AVCaptureVideoPreviewLayer layerWithSession:_captureSession];
-        _prevLayer.videoGravity=AVLayerVideoGravityResizeAspectFill;
-        _prevLayer.connection.videoOrientation = AVCaptureVideoOrientationLandscapeRight;//[self videoOrientationFromCurrentDeviceOrientation];
+        _prevLayer.videoGravity = AVLayerVideoGravityResizeAspectFill;
+        _prevLayer.connection.videoOrientation = (AVCaptureVideoOrientation)[[UIApplication sharedApplication] statusBarOrientation];
         
     }
     
@@ -72,13 +72,6 @@
     }
 }
 
-//UIDeviceOrientationUnknown,
-//UIDeviceOrientationPortrait,            // Device oriented vertically, home button on the bottom
-//UIDeviceOrientationPortraitUpsideDown,  // Device oriented vertically, home button on the top
-//UIDeviceOrientationLandscapeLeft,       // Device oriented horizontally, home button on the right
-//UIDeviceOrientationLandscapeRight,      // Device oriented horizontally, home button on the left
-//UIDeviceOrientationFaceUp,              // Device oriented flat, face up
-//UIDeviceOrientationFaceDown
 
 - (void)initCaptureWithPreviewScale:(CGFloat)scale
 {
