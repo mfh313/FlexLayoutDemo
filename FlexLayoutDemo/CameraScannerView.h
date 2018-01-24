@@ -21,4 +21,8 @@
     
 }
 
+- (void)start;
+
+- (void)initCaptureWithPreviewScale:(CGFloat)scale;
+
 @end
