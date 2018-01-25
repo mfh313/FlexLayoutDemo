@@ -27,6 +27,10 @@
         
         AVCaptureConnection *connection =[_captureOutput connectionWithMediaType:AVMediaTypeMetadata];
         connection.videoOrientation = (AVCaptureVideoOrientation)[[UIApplication sharedApplication] statusBarOrientation];
+        if ([connection isVideoOrientationSupported])
+        {
+            
+        }
         
         //初始化链接对象
         _captureSession = [[AVCaptureSession alloc] init];
@@ -50,11 +54,8 @@
 }
 
 - (AVCaptureVideoOrientation)videoOrientationFromCurrentDeviceOrientation {
-    UIDevice *device = [UIDevice currentDevice];
     
-    NSLog(@"device.orientation=%@",@(device.orientation));
-    
-    switch (device.orientation) {
+    switch ([[UIApplication sharedApplication] statusBarOrientation]) {
         case UIDeviceOrientationPortrait: {
             return AVCaptureVideoOrientationPortrait;
         }
