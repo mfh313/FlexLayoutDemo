@@ -9,6 +9,13 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
+@protocol CameraScannerViewDelegate <NSObject>
+
+@optional
+- (void)captureOutput:(AVCaptureOutput *)output didOutputMetadataObjects:(NSArray<__kindof AVMetadataObject *> *)metadataObjects fromConnection:(AVCaptureConnection *)connection;
+
+@end
+
 @interface CameraScannerView : UIView <AVCaptureMetadataOutputObjectsDelegate>
 {
     AVCaptureSession *_captureSession; //输入输出的中间桥梁
@@ -22,7 +29,6 @@
 }
 
 - (void)start;
-
 - (void)initCaptureWithPreviewScale:(CGFloat)scale;
 
 @end
