@@ -23,6 +23,12 @@
 		AC4449A31F5695C000292E30 /* VZFlexLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4449A21F5695C000292E30 /* VZFlexLayout.framework */; };
 		AC4449A41F5695C000292E30 /* VZFlexLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC4449A21F5695C000292E30 /* VZFlexLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC4449A81F56968D00292E30 /* MFFlexLayoutCellView.mm in Sources */ = {isa = PBXBuildFile; fileRef = AC4449A71F56968D00292E30 /* MFFlexLayoutCellView.mm */; };
+		AC540A0C20AE7CD8007E6D9C /* MFCoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5409FC20AE7CD8007E6D9C /* MFCoverController.m */; };
+		AC540A0D20AE7CD8007E6D9C /* MFPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5409FE20AE7CD8007E6D9C /* MFPageController.m */; };
+		AC540A0E20AE7CD8007E6D9C /* MFTabController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC540A0020AE7CD8007E6D9C /* MFTabController.m */; };
+		AC540A0F20AE7CD8007E6D9C /* MFPageContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC540A0720AE7CD8007E6D9C /* MFPageContentView.m */; };
+		AC540A1020AE7CD8007E6D9C /* MFPageTagView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC540A0920AE7CD8007E6D9C /* MFPageTagView.m */; };
+		AC540A1120AE7CD8007E6D9C /* MFTagBarScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC540A0B20AE7CD8007E6D9C /* MFTagBarScrollView.m */; };
 		AC5C6F5920196D8A00DCB68B /* CameraScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC5C6F5820196D8A00DCB68B /* CameraScanViewController.m */; };
 		AC77FB9A2016CE6F00B3E6AB /* CameraScannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = AC77FB992016CE6F00B3E6AB /* CameraScannerView.m */; };
 		AC77FB9C2016CEC500B3E6AB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC77FB9B2016CEC500B3E6AB /* AVFoundation.framework */; };
@@ -72,6 +78,21 @@
 		AC4449A21F5695C000292E30 /* VZFlexLayout.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VZFlexLayout.framework; path = FlexLayoutDemo/VZFlexLayout.framework; sourceTree = "<group>"; };
 		AC4449A61F56968D00292E30 /* MFFlexLayoutCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFFlexLayoutCellView.h; sourceTree = "<group>"; };
 		AC4449A71F56968D00292E30 /* MFFlexLayoutCellView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MFFlexLayoutCellView.mm; sourceTree = "<group>"; };
+		AC5409FB20AE7CD8007E6D9C /* MFCoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCoverController.h; sourceTree = "<group>"; };
+		AC5409FC20AE7CD8007E6D9C /* MFCoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFCoverController.m; sourceTree = "<group>"; };
+		AC5409FD20AE7CD8007E6D9C /* MFPageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFPageController.h; sourceTree = "<group>"; };
+		AC5409FE20AE7CD8007E6D9C /* MFPageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFPageController.m; sourceTree = "<group>"; };
+		AC5409FF20AE7CD8007E6D9C /* MFTabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFTabController.h; sourceTree = "<group>"; };
+		AC540A0020AE7CD8007E6D9C /* MFTabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFTabController.m; sourceTree = "<group>"; };
+		AC540A0220AE7CD8007E6D9C /* MFCoverProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFCoverProtocol.h; sourceTree = "<group>"; };
+		AC540A0320AE7CD8007E6D9C /* MFPageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFPageProtocol.h; sourceTree = "<group>"; };
+		AC540A0420AE7CD8007E6D9C /* MFTabProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFTabProtocol.h; sourceTree = "<group>"; };
+		AC540A0620AE7CD8007E6D9C /* MFPageContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFPageContentView.h; sourceTree = "<group>"; };
+		AC540A0720AE7CD8007E6D9C /* MFPageContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFPageContentView.m; sourceTree = "<group>"; };
+		AC540A0820AE7CD8007E6D9C /* MFPageTagView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFPageTagView.h; sourceTree = "<group>"; };
+		AC540A0920AE7CD8007E6D9C /* MFPageTagView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFPageTagView.m; sourceTree = "<group>"; };
+		AC540A0A20AE7CD8007E6D9C /* MFTagBarScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFTagBarScrollView.h; sourceTree = "<group>"; };
+		AC540A0B20AE7CD8007E6D9C /* MFTagBarScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFTagBarScrollView.m; sourceTree = "<group>"; };
 		AC5C6F5720196D8A00DCB68B /* CameraScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraScanViewController.h; sourceTree = "<group>"; };
 		AC5C6F5820196D8A00DCB68B /* CameraScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CameraScanViewController.m; sourceTree = "<group>"; };
 		AC77FB982016CE6F00B3E6AB /* CameraScannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CameraScannerView.h; sourceTree = "<group>"; };
@@ -164,6 +185,7 @@
 				ACC039C21F885BB600AC8CDE /* MFCoverDropView.m */,
 				ACC039C41F88B1D000AC8CDE /* MFCoverDropTagView.h */,
 				ACC039C51F88B1D000AC8CDE /* MFCoverDropTagView.m */,
+				AC5409F920AE7CD8007E6D9C /* MFPage */,
 				ACAFD3841FCBEADE00157334 /* MFRootPageMain */,
 				AC92F2F21FC93A0D009AC9BF /* ICSDrawerController */,
 				ACC039C71F88C27A00AC8CDE /* HexColors */,
@@ -182,6 +204,52 @@
 				AC44498A1F56955300292E30 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC5409F920AE7CD8007E6D9C /* MFPage */ = {
+			isa = PBXGroup;
+			children = (
+				AC5409FA20AE7CD8007E6D9C /* Controller */,
+				AC540A0120AE7CD8007E6D9C /* Protocol */,
+				AC540A0520AE7CD8007E6D9C /* View */,
+			);
+			path = MFPage;
+			sourceTree = "<group>";
+		};
+		AC5409FA20AE7CD8007E6D9C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				AC5409FB20AE7CD8007E6D9C /* MFCoverController.h */,
+				AC5409FC20AE7CD8007E6D9C /* MFCoverController.m */,
+				AC5409FD20AE7CD8007E6D9C /* MFPageController.h */,
+				AC5409FE20AE7CD8007E6D9C /* MFPageController.m */,
+				AC5409FF20AE7CD8007E6D9C /* MFTabController.h */,
+				AC540A0020AE7CD8007E6D9C /* MFTabController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AC540A0120AE7CD8007E6D9C /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AC540A0220AE7CD8007E6D9C /* MFCoverProtocol.h */,
+				AC540A0320AE7CD8007E6D9C /* MFPageProtocol.h */,
+				AC540A0420AE7CD8007E6D9C /* MFTabProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		AC540A0520AE7CD8007E6D9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AC540A0620AE7CD8007E6D9C /* MFPageContentView.h */,
+				AC540A0720AE7CD8007E6D9C /* MFPageContentView.m */,
+				AC540A0820AE7CD8007E6D9C /* MFPageTagView.h */,
+				AC540A0920AE7CD8007E6D9C /* MFPageTagView.m */,
+				AC540A0A20AE7CD8007E6D9C /* MFTagBarScrollView.h */,
+				AC540A0B20AE7CD8007E6D9C /* MFTagBarScrollView.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		AC92F2F21FC93A0D009AC9BF /* ICSDrawerController */ = {
@@ -288,20 +356,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC4449911F56955300292E30 /* ViewController.mm in Sources */,
+				AC540A1020AE7CD8007E6D9C /* MFPageTagView.m in Sources */,
 				ACC039CA1F88C27A00AC8CDE /* HexColors.m in Sources */,
 				A5241E421FBF2AA500B6B844 /* MFStackDemoComponent.mm in Sources */,
 				ACC039C31F885BB600AC8CDE /* MFCoverDropView.m in Sources */,
+				AC540A0C20AE7CD8007E6D9C /* MFCoverController.m in Sources */,
 				AC92F2F71FC93A0D009AC9BF /* ICSDrawerController.m in Sources */,
 				AC44498E1F56955300292E30 /* AppDelegate.m in Sources */,
 				AC92F2FB1FC93C06009AC9BF /* MFLeftMainViewController.m in Sources */,
+				AC540A0D20AE7CD8007E6D9C /* MFPageController.m in Sources */,
 				ACC039C61F88B1D100AC8CDE /* MFCoverDropTagView.m in Sources */,
 				AC4449A81F56968D00292E30 /* MFFlexLayoutCellView.mm in Sources */,
 				ACAFD3881FCBEADE00157334 /* MFRootPageMainViewController.m in Sources */,
 				AC44498B1F56955300292E30 /* main.m in Sources */,
 				AC92F2F81FC93A0D009AC9BF /* ICSDropShadowView.m in Sources */,
+				AC540A0E20AE7CD8007E6D9C /* MFTabController.m in Sources */,
 				AC77FB9A2016CE6F00B3E6AB /* CameraScannerView.m in Sources */,
 				AC92F2FE1FC93C4B009AC9BF /* MFRightMainViewController.m in Sources */,
+				AC540A0F20AE7CD8007E6D9C /* MFPageContentView.m in Sources */,
 				AC5C6F5920196D8A00DCB68B /* CameraScanViewController.m in Sources */,
+				AC540A1120AE7CD8007E6D9C /* MFTagBarScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
